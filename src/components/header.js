@@ -1,42 +1,45 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import React from "react";
+import NavBar from "../components/navbar";
+import "./header.scss";
+const Header = ({ siteTitle, siteSubtitle }) => (
+  <header style={{}}>
+    {/* {console.log(siteTitle, siteSubtitle)} */}
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        maxWidth: 960
+        // padding: `1.45rem 1.0875rem`
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <div className="titulek">
+        <h1 style={{ margin: 0, display: "block" }}>
+          <Link
+            to="/"
+            style={{
+              color: `white`,
+              textDecoration: `none`
+            }}
+          >
+            {siteTitle}
+          </Link>
+        </h1>
+        <h2>{siteSubtitle}</h2>
+      </div>
+      <div className="navwrap">
+        <NavBar />
+      </div>
     </div>
-  </div>
-)
+  </header>
+);
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+  siteTitle: PropTypes.string
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
-}
+  siteTitle: ``
+};
 
-export default Header
+export default Header;

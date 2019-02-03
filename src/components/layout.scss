@@ -281,6 +281,29 @@ h1 {
   line-height: 1.1;
 }
 
+.titulek {
+  display: inline-block;
+}
+
+.bg {
+  position: absolute;
+  background: gray;
+
+  background: url(../images/bg.png) repeat;
+  min-height: 1000px;
+  z-index: -999;
+  width: 100%;
+}
+
+
+div.wrap {
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+}
+
 h2 {
   margin-left: 0;
   margin-right: 0;
