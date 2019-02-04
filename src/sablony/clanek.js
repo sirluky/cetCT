@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 // import BackButton from "../components/backbutton";
 import Layout from "../components/layout";
+import Seo from "../components/seo";
 // export default class clanek extends Component {
 //   render() {
 //     const currentPage = this.props.data.wordpressPost;
@@ -23,6 +24,15 @@ class PostTemplate extends Component {
 
     return (
       <Layout>
+        <Seo
+          title={post.title}
+          keywords={[
+            `OB CET`,
+            `Orientační běh Česká Třebová`,
+            `OB Loko Česká Třebová`
+          ]}
+        />
+
         <div className="clanek">
           <h2 dangerouslySetInnerHTML={{ __html: post.title }} />
           <p dangerouslySetInnerHTML={{ __html: post.content }} />

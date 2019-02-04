@@ -3,10 +3,12 @@ module.exports = {
     title: `CET`,
     subtitle: "OB Loko Česká Třebová",
     description: `Officialní webovky klubu CET - Orientacni beh Ceska Trebova`,
-    author: `@gatsbyjs`
+    author: `@LukasKovar`,
+    siteUrl: `http://obcet.surge.sh/`
   },
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -17,6 +19,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    "gatsby-plugin-robots-txt",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Layout from "../components/layout";
 import { Link } from "gatsby";
 import Strankovani from "../components/strankovani";
+import Seo from "../components/seo";
 class SiteTemplate extends Component {
   render() {
     const str = this.props.pageContext.str;
@@ -14,6 +15,15 @@ class SiteTemplate extends Component {
     console.log(str);
     return (
       <Layout>
+        <Seo
+          title="Domovská stránka"
+          keywords={[
+            `OB CET`,
+            `Orientační běh Česká Třebová`,
+            `OB Loko Česká Třebová`
+          ]}
+        />
+
         <div className="clanky">
           {str.map((clanek, index) => (
             <div className="clanek" key={index}>
