@@ -97,7 +97,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         })
         .then(result => {
           const pages = result.data.allWordpressPage.edges;
-          console.log(pages);
+          // console.log(pages);
           const Pagetemplate = path.resolve("./src/sablony/stranka.js");
           pages.forEach(page => {
             console.log(page);
