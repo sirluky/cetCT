@@ -29,6 +29,14 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   title
                   content
                   id
+                  date
+                  author {
+                    name
+                  }
+                  excerpt
+                  acf {
+                    plnezob
+                  }
                 }
               }
             }
@@ -89,6 +97,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                     content
                     slug
                     id
+                    excerpt
                   }
                 }
               }

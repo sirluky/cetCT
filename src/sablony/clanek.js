@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 // import BackButton from "../components/backbutton";
 import Layout from "../components/layout";
-import Seo from "../components/seo";
+import BlogFull from "./components/blogfull";
 // export default class clanek extends Component {
 //   render() {
 //     const currentPage = this.props.data.wordpressPost;
@@ -18,29 +18,12 @@ import Seo from "../components/seo";
 
 class PostTemplate extends Component {
   render() {
-    console.log(this.props.pageContext);
+    // console.log(this.props.pageContext);
     const post = this.props.data.wordpressPost;
-    const datum = new Date(post.date);
 
     return (
       <Layout>
-        <Seo
-          title={post.title}
-          keywords={[
-            `OB CET`,
-            `Orientační běh Česká Třebová`,
-            `OB Loko Česká Třebová`
-          ]}
-        />
-
-        <div className="clanek">
-          <h2 dangerouslySetInnerHTML={{ __html: post.title }} />
-          <p dangerouslySetInnerHTML={{ __html: post.content }} />
-        </div>
-        <small>
-          Napsal: {post.author.name}
-          {datum.getDate() + "." + datum.getMonth() + "." + datum.getFullYear()}
-        </small>
+        <BlogFull post={post} />
       </Layout>
     );
   }
@@ -65,6 +48,12 @@ export const query = graphql`
       author {
         name
       }
+      # acf {
+      #   poradi
+      #   nahledovka {
+      #     source_url
+      #   }
+      # }
     }
   }
 `;

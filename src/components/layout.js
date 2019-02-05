@@ -3,22 +3,34 @@ import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import Header from "./header";
 import "./layout.scss";
+// import Modernizr from "modernizr";
+
 import BG from "../images/bg.png";
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-            subtitle
-          }
+        # site {
+        #   siteMetadata {
+        #     title
+        #     subtitle
+        #   }
+        # }
+        wordpressSiteMetadata {
+          description
+          name
         }
       }
     `}
     render={data => (
       <>
-        {console.log(data)}
+        {/* {on("webp", function(result) {
+          if (result) {
+            console.log("Support WEBP");
+          } else {
+            console.log("The test failed! no WEBP :-(");
+          }
+        })} */}
 
         <div className="bg">
           <div
@@ -30,8 +42,8 @@ const Layout = ({ children }) => (
             }}
           >
             <Header
-              siteTitle={data.site.siteMetadata.title}
-              siteSubtitle={data.site.siteMetadata.subtitle}
+              siteTitle={data.wordpressSiteMetadata.name}
+              siteSubtitle={data.wordpressSiteMetadata.description}
             />
 
             <div className="wrap">

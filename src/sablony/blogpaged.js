@@ -4,6 +4,8 @@ import Layout from "../components/layout";
 import { Link } from "gatsby";
 import Strankovani from "../components/strankovani";
 import Seo from "../components/seo";
+import BlogFull from "./components/blogfull";
+
 class SiteTemplate extends Component {
   render() {
     const str = this.props.pageContext.str;
@@ -16,7 +18,7 @@ class SiteTemplate extends Component {
     return (
       <Layout>
         <Seo
-          title="Domovská stránka"
+          title={`Domovská stránka ${n > 0 ? " " + (n + 1) : ""}`}
           keywords={[
             `OB CET`,
             `Orientační běh Česká Třebová`,
@@ -27,10 +29,24 @@ class SiteTemplate extends Component {
         <div className="clanky">
           {str.map((clanek, index) => (
             <div className="clanek" key={index}>
-              <Link to={clanek.node.slug}>
-                <h2 dangerouslySetInnerHTML={{ __html: clanek.node.title }} />
-              </Link>
-              <p dangerouslySetInnerHTML={{ __html: clanek.node.content }} />
+              {clanek.node.acf !== null && clanek.node.acf.plnezob === true ? (
+                <BlogFull post={clanek.node} />
+              ) : (
+                <div>
+                  <Link to={clanek.node.slug}>
+                    <h2
+                      dangerouslySetInnerHTML={{
+                        __html: clanek.node.title
+                      }}
+                    />
+                  </Link>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: clanek.node.excerpt
+                    }}
+                  />
+                </div>
+              )}
             </div>
           ))}
         </div>

@@ -1,3 +1,5 @@
+$barvanadpisuprispevku:rgb(170, 45, 0);
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -283,6 +285,11 @@ h1 {
 
 .titulek {
   display: inline-block;
+
+  h1 {
+    user-select: none;
+
+  }
 }
 
 .bg {
@@ -295,12 +302,23 @@ h1 {
   width: 100%;
 }
 
+.clanky {
+  a {
+    color: $barvanadpisuprispevku;
+  }
+}
+
+.clanek {
+  h2 {
+    color: $barvanadpisuprispevku;
+  }
+}
 
 div.wrap {
   padding: 20px;
   max-width: 960px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.85);
   padding: 20px;
 }
 
