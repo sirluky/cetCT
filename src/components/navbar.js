@@ -3,7 +3,6 @@ import { StaticQuery, Link } from "gatsby";
 import "./navbar.scss";
 class navbar extends Component {
   render() {
-    console.log(this.props.data);
     return (
       <StaticQuery
         query={graphql`
