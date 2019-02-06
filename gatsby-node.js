@@ -10,7 +10,7 @@ const fetchWordpressPosts = graphql =>
   graphql(
     `
       {
-        allWordpressPost {
+        allWordpressPost(sort: { fields: date, order: DESC }) {
           edges {
             node {
               slug

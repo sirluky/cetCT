@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import Strankovani from "../components/strankovani";
 import Seo from "../components/seo";
 import BlogFull from "./components/blogfull";
-
+import "./clanky.scss";
 class SiteTemplate extends Component {
   render() {
     const str = this.props.pageContext.str;
@@ -28,7 +28,7 @@ class SiteTemplate extends Component {
 
         <div className="clanky">
           {str.map((clanek, index) => (
-            <div className="clanek" key={index}>
+            <article className="clanek" key={index}>
               {clanek.node.acf !== null && clanek.node.acf.plnezob === true ? (
                 <BlogFull post={clanek.node} />
               ) : (
@@ -44,10 +44,12 @@ class SiteTemplate extends Component {
                       __html: clanek.node.excerpt
                     }}
                   />
-                  <Link to={clanek.node.slug}>Zobrazit celý článek.</Link>
+                  <span className="more">
+                    <Link to={clanek.node.slug}>Zobrazit celý článek.</Link>
+                  </span>
                 </div>
               )}
-            </div>
+            </article>
           ))}
         </div>
         <Strankovani n={n} maxn={maxn} />

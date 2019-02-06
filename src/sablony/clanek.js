@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import get from "lodash/get";
 import { graphql } from "gatsby";
 // import BackButton from "../components/backbutton";
+import Seo from "../components/seo";
 import Layout from "../components/layout";
 import BlogFull from "./components/blogfull";
 // export default class clanek extends Component {
@@ -23,6 +24,15 @@ class PostTemplate extends Component {
 
     return (
       <Layout>
+        <Seo
+          title={post.title}
+          keywords={[
+            `OB CET`,
+            `Orientační běh Česká Třebová`,
+            `OB Loko Česká Třebová`
+          ]}
+        />
+
         <BlogFull post={post} />
       </Layout>
     );
