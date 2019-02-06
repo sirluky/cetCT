@@ -40,7 +40,7 @@ class SiteTemplate extends Component {
                       }}
                     />
                   </Link>
-                  <p
+                  <div
                     dangerouslySetInnerHTML={{
                       __html: clanek.node.excerpt
                     }}

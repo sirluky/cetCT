@@ -3,6 +3,7 @@ import Seo from "../../components/seo";
 
 export default function blogfull({ post }) {
   const datum = new Date(post.date);
+
   return (
     <div>
       <Seo
@@ -15,7 +16,10 @@ export default function blogfull({ post }) {
       />
       <div className="clanek">
         <h2 dangerouslySetInnerHTML={{ __html: post.title }} />
-        <p dangerouslySetInnerHTML={{ __html: post.content }} />
+
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+
+        {/* <p>{post.content}</p> */}
       </div>
       {/* {post.acf !== null ? (
           <p style={{ color: "darkred" }}>{post.acf.poradi}</p>
