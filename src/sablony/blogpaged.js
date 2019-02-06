@@ -33,18 +33,18 @@ class SiteTemplate extends Component {
                 <BlogFull post={clanek.node} />
               ) : (
                 <div>
-                  <Link to={clanek.node.slug}>
-                    <h2
-                      dangerouslySetInnerHTML={{
-                        __html: clanek.node.title
-                      }}
-                    />
-                  </Link>
+                  <h2
+                    dangerouslySetInnerHTML={{
+                      __html: clanek.node.title
+                    }}
+                  />
+
                   <div
                     dangerouslySetInnerHTML={{
                       __html: clanek.node.excerpt
                     }}
                   />
+                  <Link to={clanek.node.slug}>Zobrazit celý článek.</Link>
                 </div>
               )}
             </div>
