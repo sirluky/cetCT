@@ -1,22 +1,22 @@
 import { Link } from "gatsby";
 import React from "react";
-
+import "./strankovani.scss";
 export default ({ n, maxn }) => (
   <div className="strankovani">
     {" "}
     {n - 1 >= 0 ? (
-      <Link style={{ display: "block" }} to={`/${n - 1 > 0 ? n - 1 : "/"}`}>
-        Minulá stránka
+      <Link className="pred" to={`/${n - 1 > 0 ? n - 1 : "/"}`}>
+        Předchozí stránka
       </Link>
     ) : (
-      <p> Minulá stránka</p>
+      <p className="pred"> Minulá stránka</p>
     )}
     {n + 1 < maxn ? (
-      <Link style={{ display: "block" }} to={`/${n + 1}`}>
+      <Link className="dalsi" to={`/${n + 1}`}>
         Další stránka
       </Link>
     ) : (
-      <p> Další stránka</p>
+      <p className="dalsi"> Další stránka</p>
     )}
   </div>
 );
