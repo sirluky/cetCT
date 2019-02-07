@@ -4,8 +4,9 @@
  * @param {*} toDelete atributy, ktere chceme smazat
  */
 function filterAtr(content, toDeletearr = ["srcset"]) {
+  let out = "";
+
   toDeletearr.forEach(toDelete => {
-    let out = "";
     let toFind = toDelete + '="';
     let from = content.search(toFind);
 
