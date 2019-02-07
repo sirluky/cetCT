@@ -34,7 +34,7 @@ class SiteTemplate extends Component {
                 <BlogFull post={clanek.node} />
               ) : (
                 <div>
-                  <h2
+                  <h3
                     dangerouslySetInnerHTML={{
                       __html: clanek.node.title
                     }}

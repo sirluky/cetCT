@@ -8,7 +8,7 @@ export default function blogfull({ post }) {
   return (
     <div>
       <div className="clanek">
-        <h2 dangerouslySetInnerHTML={{ __html: post.title }} />
+        <h3 dangerouslySetInnerHTML={{ __html: post.title }} />
 
         <div dangerouslySetInnerHTML={{ __html: filterAtr(post.content) }} />
 

@@ -1,4 +1,4 @@
-$barvanadpisuprispevku:rgb(170, 45, 0);
+$barvanadpisuprispevku:rgb(99, 48, 30);
 
 html {
   font-family: sans-serif;
@@ -308,11 +308,13 @@ h1 {
   }
 }
 
-.clanek {
-  h2 {
-    color: $barvanadpisuprispevku;
-  }
+
+h3 {
+  color: $barvanadpisuprispevku;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 
 div.wrap {
   padding: 20px;
@@ -340,6 +342,7 @@ h2 {
   line-height: 1.1;
 }
 
+
 h3 {
   margin-left: 0;
   margin-right: 0;
@@ -349,7 +352,7 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  // color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;

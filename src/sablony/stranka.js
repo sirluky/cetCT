@@ -22,7 +22,7 @@ class SiteTemplate extends Component {
         />
         <div className="clanek">
           {/* <h2>{page.title}</h2> */}
-          <h2 dangerouslySetInnerHTML={{ __html: page.title }} />
+          <h3 dangerouslySetInnerHTML={{ __html: page.title }} />
 
           <div dangerouslySetInnerHTML={{ __html: filterAtr(page.content) }} />
           <small>
