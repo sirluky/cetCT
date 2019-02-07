@@ -1,5 +1,6 @@
 import React from "react";
-import Seo from "../../components/seo";
+// import Seo from "../../components/seo";
+const filterAtr = require("../../../myfunctions/filterAtr");
 
 export default function blogfull({ post }) {
   const datum = new Date(post.date);
@@ -9,7 +10,7 @@ export default function blogfull({ post }) {
       <div className="clanek">
         <h2 dangerouslySetInnerHTML={{ __html: post.title }} />
 
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <div dangerouslySetInnerHTML={{ __html: filterAtr(post.content) }} />
 
         {/* <p>{post.content}</p> */}
       </div>

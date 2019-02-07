@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+const filterAtr = require("../../myfunctions/filterAtr");
 
 class SiteTemplate extends Component {
   render() {
@@ -23,7 +24,7 @@ class SiteTemplate extends Component {
           {/* <h2>{page.title}</h2> */}
           <h2 dangerouslySetInnerHTML={{ __html: page.title }} />
 
-          <div dangerouslySetInnerHTML={{ __html: page.content }} />
+          <div dangerouslySetInnerHTML={{ __html: filterAtr(page.content) }} />
           <small>
             Napsal: {page.author.name}{" "}
             {datum.getDate() +

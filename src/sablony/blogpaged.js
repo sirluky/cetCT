@@ -6,6 +6,7 @@ import Strankovani from "../components/strankovani";
 import Seo from "../components/seo";
 import BlogFull from "./components/blogfull";
 import "./clanky.scss";
+
 class SiteTemplate extends Component {
   render() {
     const str = this.props.pageContext.str;
