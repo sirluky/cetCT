@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import Header from "./header";
 import "./layout.scss";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
+
 // import Modernizr from "modernizr";
 
 import BG from "../images/bg.png";
@@ -54,9 +56,9 @@ const Layout = ({ children }) => (
               {children}
               <footer style={{ textAlign: "center" }}>
                 © {new Date().getFullYear()}, Vytvořil{" "}
-                <a href="https://wizardly-ride-f58df7.netlify.com">
+                <OutboundLink href="https://wizardly-ride-f58df7.netlify.com">
                   Lukáš Kovář
-                </a>
+                </OutboundLink>
               </footer>
             </div>
           </div>
