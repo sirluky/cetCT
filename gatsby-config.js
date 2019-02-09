@@ -4,7 +4,7 @@ module.exports = {
     subtitle: "OB Loko Česká Třebová",
     description: `Officialní webovky klubu CET - Orientacni beh Ceska Trebova`,
     author: `@LukasKovar`,
-    siteUrl: `http://obcet.surge.sh/`
+    siteUrl: `https://obcet.tk/`
   },
   plugins: [
     {
