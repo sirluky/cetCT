@@ -26,7 +26,7 @@ const buildPaging = (createPage, posts, blogPost, blogpaged) => {
   stranky.push(stranka);
   stranka = [];
   stranky.forEach((str, index) => {
-    let cislo = index === 0 ? "" : "page/" + index;
+    let cislo = index === 0 ? "" : "page/" + (index + 1);
 
     createPage({
       path: `/${cislo}`,
