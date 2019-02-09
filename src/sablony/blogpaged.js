@@ -48,9 +48,9 @@ class SiteTemplate extends Component {
                   <span className="more">
                     <Link to={clanek.node.slug}>Zobrazit celý článek.</Link>
                   </span>
-                  <hr />
                 </div>
               )}
+              <hr />
             </article>
           ))}
         </div>
