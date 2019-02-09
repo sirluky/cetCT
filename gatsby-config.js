@@ -118,9 +118,9 @@ module.exports = {
         // },
         // Set verboseOutput to true to display a verbose output on `npm run develop` or `npm run build`
         // It can help you debug specific API Endpoints problems.
-        verboseOutput: true,
+        verboseOutput: false,
         // Set how many pages are retrieved per API request.
-        perPage: 100
+        perPage: 100,
         // Search and Replace Urls across WordPress content.
         // searchAndReplaceContentUrls: {
         //   sourceUrl: "https://source-url.com",
@@ -137,15 +137,15 @@ module.exports = {
         // ` will either include or exclude routes ending in `comments` and
         // all routes that begin with `yoast` from fetch.
         // Whitelisted routes using glob patterns
-        // includedRoutes: [
-        //   "**/*/*/categories",
-        //   "**/*/*/posts",
-        //   "**/*/*/pages",
-        //   "**/*/*/media",
-        //   "**/*/*/tags",
-        //   "**/*/*/taxonomies",
-        //   "**/*/*/users"
-        // ],
+        includedRoutes: [
+          // "**/*/*/categories",
+          "**/*/*/posts",
+          "**/*/*/pages",
+          // "**/*/*/media",
+          // "**/*/*/tags",
+          // "**/*/*/taxonomies",
+          "**/*/*/users"
+        ]
         // Blacklisted routes using glob patterns
         // excludedRoutes: ["**/*/*/posts/1456"],
         // use a custom normalizer which is applied after the built-in ones.
