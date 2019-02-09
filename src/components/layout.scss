@@ -293,11 +293,25 @@ h1 {
 }
 
 .bg {
-  position: absolute;
-  background: gray;
+  position: fixed;
+  // background: gray;
+  top: 0;
+  left: 0;
+  background: #c3e2b2;
 
-  background: url(../images/bg.png) repeat;
-  min-height: 1000px;
+  // background: linear-gradient(to right, #c02425, #f0cb35);
+  // background: linear-gradient(to right, #f85032, #e73827);
+  // /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // background: linear-gradient(to right, #56ab2f, #a8e063);
+  // /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // background: linear-gradient(to bottom, #ece9e6, #c8f8d6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right bottom, lighten(#76b852, 20), lighten(#8dc26f, 20));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  // background: linear-gradient() // 
+  // background: url(../images/bg.png) repeat;
+  min-height: 10000px;
   z-index: -999;
   width: 100%;
 }

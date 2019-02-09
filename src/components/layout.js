@@ -33,35 +33,35 @@ const Layout = ({ children }) => (
             console.log("The test failed! no WEBP :-(");
           }
         })} */}
+        <div className="bg" />
 
-        <div className="bg">
-          <div
-            style={{
-              margin: `0 auto`,
-              // ,
-              padding: `0px 1.0875rem 1.45rem`,
-              paddingTop: 0
-            }}
-          >
-            {/* <Header
+        <div
+          style={{
+            margin: `0 auto`,
+            // ,
+            padding: `0px 1.0875rem 1.45rem`,
+            paddingTop: 0
+          }}
+        >
+          {/* <Header
               siteTitle={data.wordpressSiteMetadata.name}
               siteSubtitle={data.wordpressSiteMetadata.description}
             /> */}
-            <Header
-              siteTitle={data.site.siteMetadata.title}
-              siteSubtitle={data.site.siteMetadata.subtitle}
-            />
+          <Header
+            siteTitle={data.site.siteMetadata.title}
+            siteSubtitle={data.site.siteMetadata.subtitle}
+          />
 
-            <div className="wrap">
-              {children}
-              <footer style={{ textAlign: "center" }}>
-                © {new Date().getFullYear()}, Vytvořil{" "}
-                <OutboundLink href="https://wizardly-ride-f58df7.netlify.com">
-                  Lukáš Kovář
-                </OutboundLink>
-              </footer>
-            </div>
+          <div className="wrap">
+            {children}
+            <footer style={{ textAlign: "center" }}>
+              © {new Date().getFullYear()}, Vytvořil{" "}
+              <OutboundLink href="https://wizardly-ride-f58df7.netlify.com">
+                Lukáš Kovář
+              </OutboundLink>
+            </footer>
           </div>
+          {/* </div> */}
         </div>
       </>
     )}
