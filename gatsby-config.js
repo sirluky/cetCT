@@ -13,18 +13,18 @@ module.exports = {
         logo: "./src/images/favicon.png",
 
         // WebApp Manifest Configuration
-        appName: null, // Inferred with your package.json
-        appDescription: null,
-        developerName: null,
-        developerURL: null,
-        dir: "auto",
-        lang: "cs-CZ",
-        background: "#fff",
-        theme_color: "#fff",
-        display: "standalone",
-        orientation: "any",
-        start_url: "/?homescreen=1",
-        version: "1.0",
+        // appName: null, // Inferred with your package.json
+        // appDescription: null,
+        // developerName: null,
+        // developerURL: null,
+        // dir: "auto",
+        // lang: "cs-CZ",
+        // background: "#fff",
+        // theme_color: "#fff",
+        // display: "standalone",
+        // orientation: "any",
+        // start_url: "/?homescreen=1",
+        // version: "1.0",
 
         icons: {
           android: true,
@@ -56,8 +56,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Orientační Běh Česká Třebová`,
+        short_name: `CET`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
