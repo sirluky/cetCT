@@ -329,13 +329,17 @@ h3 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+div.mainwrap {
+  padding: 0 20px;
+  padding-bottom: 20px;
+}
 
 div.wrap {
   padding: 20px;
   max-width: 960px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.92);
-  padding: 20px;
+  // padding: 20px;
 }
 
 h2 {
@@ -768,5 +772,19 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+
+  // div.mainwrap {
+  //   padding: 0;
+  // }
+}
+
+@media only screen and (max-width: 400px) {
+  // html {
+  //   font-size: 100%;
+  // }
+
+  div.mainwrap {
+    padding: 0;
   }
 }
