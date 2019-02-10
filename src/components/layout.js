@@ -60,6 +60,11 @@ const Layout = ({ children }) => (
               <OutboundLink href="https://wizardly-ride-f58df7.netlify.com">
                 Lukáš Kovář
               </OutboundLink>
+              <img
+                style={{ margin: 0, padding: 0, marginLeft: 10 }}
+                src="https://api.netlify.com/api/v1/badges/8febcbba-e5a9-47f1-90ca-ad8b4fec7015/deploy-status"
+              />
+              {/* <br /> */}
             </footer>
           </div>
           {/* </div> */}
