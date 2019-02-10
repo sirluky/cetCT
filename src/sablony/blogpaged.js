@@ -6,6 +6,7 @@ import Strankovani from "../components/strankovani";
 import Seo from "../components/seo";
 import BlogFull from "./components/blogfull";
 import "./clanky.scss";
+import Img from "gatsby-image";
 
 class SiteTemplate extends Component {
   render() {
@@ -15,7 +16,7 @@ class SiteTemplate extends Component {
 
     // const page = this.props.data.wordpressPage;
     // const datum = new Date(page.date);
-    console.log(str);
+    // console.log(str);
     return (
       <Layout>
         <Seo
@@ -39,12 +40,28 @@ class SiteTemplate extends Component {
                       __html: clanek.node.title
                     }}
                   />
+                  {/* {console.log(
+                    clanek.node.featured_media !== null
+                      ? clanek.node.featured_media.localFile.childImageSharp
+                          .resize.src
+                      : ""
+                  )} */}
+                  {clanek.node.featured_media !== null
+                    ? ""
+                    : // <Img
+                      //   resize={
+                      //     clanek.node.featured_media.localFile.childImageSharp
+                      //       .resize.src
+                      //   }
+                      // />
+                      ""}
 
                   <div
                     dangerouslySetInnerHTML={{
                       __html: clanek.node.excerpt
                     }}
                   />
+                  <div className="cistic" />
                   <span className="more">
                     <Link to={clanek.node.slug}>Zobrazit celý článek.</Link>
                   </span>

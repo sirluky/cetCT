@@ -25,6 +25,15 @@ const fetchWordpressPosts = graphql =>
               acf {
                 plnezob
               }
+              featured_media {
+                localFile {
+                  childImageSharp {
+                    resize(width: 300, height: 200) {
+                      src
+                    }
+                  }
+                }
+              }
             }
           }
         }

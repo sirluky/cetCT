@@ -5,17 +5,7 @@ import { graphql } from "gatsby";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
 import BlogFull from "./components/blogfull";
-// export default class clanek extends Component {
-//   render() {
-//     const currentPage = this.props.data.wordpressPost;
-//     console.log(currentPage);
-//     return (
-//       <div>
-//         <h1>{currentPage.title}</h1>
-//       </div>
-//     );
-//   }
-// }
+// import Img from "gatsby-image";
 
 class PostTemplate extends Component {
   render() {
@@ -57,6 +47,16 @@ export const query = graphql`
       date
       author {
         name
+      }
+      featured_media {
+        localFile {
+          childImageSharp {
+            fixed(width: 300, height: 200) {
+              # ...GatsbyImageSharpResolutions_withWebp_tracedSVG
+              ...GatsbyImageSharpFixed_withWebp
+            }
+          }
+        }
       }
       # acf {
       #   poradi
