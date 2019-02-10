@@ -3,7 +3,7 @@
  * @param {*} content html obsah, ktery jsme dostali z cms
  * @param {*} toDelete atributy, ktere chceme smazat
  */
-function filterAtr(content, toDeletearr = ["srcset"]) {
+function filterAtr(content, toDeletearr = ["srcset", "height"]) {
   let out = "";
 
   toDeletearr.forEach(toDelete => {
