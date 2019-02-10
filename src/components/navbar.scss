@@ -11,15 +11,24 @@ ul {
       margin: 0px 5px;
       color: rgb(80, 3, 3);
       transition: color 0.3s;
+      transition: box-shadow 0.3s;
+
 
       &:hover {
         color: lighten(rgb(80, 3, 3), 20);
-        border-bottom: 2px black solid;
+        // border-bottom: 2px black solid;
+        box-shadow: 1px 2px 2px black;
+
       }
     }
   }
 
 
+}
+
+[aria-current="page"] li {
+  // color: white;
+  box-shadow: 1px 2px 2px black;
 }
 
 .navwrap {

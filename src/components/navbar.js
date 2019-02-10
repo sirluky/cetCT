@@ -21,7 +21,7 @@ class navbar extends Component {
         render={data => (
           <nav>
             <ul>
-              <Link key={"domu"} to={`/`}>
+              <Link activeClassName={"active"} key={"domu"} to={`/`}>
                 <li>Domů</li>
               </Link>
               {data.allWordpressPage.edges.map((edge, index) => (
