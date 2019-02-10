@@ -3,10 +3,12 @@
  * @param {*} content html obsah, ktery jsme dostali z cms
  * @param {*} toDelete atributy, ktere chceme smazat
  */
-function filterAtr(content, toDeletearr = ["srcset", "height"]) {
-  let out = "";
+function filterAtr(content, toDeletearr = ["srcset", "height", "sizes"]) {
+  let out = content;
 
   toDeletearr.forEach(toDelete => {
+    content = out;
+    out = "";
     let toFind = toDelete + '="';
     let from = content.search(toFind);
 
@@ -23,7 +25,6 @@ function filterAtr(content, toDeletearr = ["srcset", "height"]) {
       from = content.search(toFind);
     }
     out += content;
-    content = out;
   });
 
   return out;

@@ -15,7 +15,7 @@ const buildPages = (createPage, result) => {
       path: `/${page.node.slug}/`,
       component: Pagetemplate,
       context: {
-        id: filterAtr(page.node.id)
+        id: page.node.id
       }
     });
   });

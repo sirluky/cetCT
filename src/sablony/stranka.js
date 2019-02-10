@@ -8,7 +8,7 @@ const filterAtr = require("../../myfunctions/filterAtr");
 class SiteTemplate extends Component {
   render() {
     const page = this.props.data.wordpressPage;
-    const datum = new Date(page.date);
+    // const datum = new Date(page.date);4
     return (
       <Layout>
         <Seo
@@ -25,14 +25,14 @@ class SiteTemplate extends Component {
           <h3 dangerouslySetInnerHTML={{ __html: page.title }} />
 
           <div dangerouslySetInnerHTML={{ __html: filterAtr(page.content) }} />
-          <small>
+          {/* <small>
             Napsal: {page.author.name}{" "}
             {datum.getDate() +
               "." +
               datum.getMonth() +
               "." +
               datum.getFullYear()}
-          </small>
+          </small> */}
         </div>
       </Layout>
     );
