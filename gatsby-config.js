@@ -7,39 +7,39 @@ module.exports = {
     siteUrl: `https://obcet.tk/`
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-favicon`,
-      options: {
-        logo: "./src/images/favicon.png",
+    // {
+    //   resolve: `gatsby-plugin-favicon`,
+    //   options: {
+    //     logo: "./src/images/favicon.png",
 
-        // WebApp Manifest Configuration
-        // appName: null, // Inferred with your package.json
-        // appDescription: null,
-        // developerName: null,
-        // developerURL: null,
-        // dir: "auto",
-        // lang: "cs-CZ",
-        // background: "#fff",
-        // theme_color: "#fff",
-        // display: "standalone",
-        // orientation: "any",
-        // start_url: "/?homescreen=1",
-        // version: "1.0",
+    //     // WebApp Manifest Configuration
+    //     // appName: null, // Inferred with your package.json
+    //     // appDescription: null,
+    //     // developerName: null,
+    //     // developerURL: null,
+    //     // dir: "auto",
+    //     // lang: "cs-CZ",
+    //     // background: "#fff",
+    //     // theme_color: "#fff",
+    //     // display: "standalone",
+    //     // orientation: "any",
+    //     // start_url: "/?homescreen=1",
+    //     // version: "1.0",
 
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          opengraph: false,
-          twitter: false,
-          yandex: false,
-          windows: false
-        }
-      }
-    },
+    //     icons: {
+    //       android: true,
+    //       appleIcon: true,
+    //       appleStartup: true,
+    //       coast: false,
+    //       favicons: true,
+    //       firefox: true,
+    //       opengraph: false,
+    //       twitter: false,
+    //       yandex: false,
+    //       windows: false
+    //     }
+    //   }
+    // },
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
@@ -59,8 +59,8 @@ module.exports = {
         name: `Orientační Běh Česká Třebová`,
         short_name: `CET`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#9EC47F`,
+        theme_color: `#9EC47F`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png` // This path is relative to the root of the site.
       }
@@ -72,7 +72,9 @@ module.exports = {
          * The base URL of the Wordpress site without the trailingslash and the protocol. This is required.
          * Example : 'gatsbyjsexamplewordpress.wordpress.com' or 'www.example-site.com'
          */
-        baseUrl: "http://obcet.tode.cz/",
+        // baseUrl: "http://obcet.tode.cz/",
+        baseUrl: "http://www.kobusti.cz/",
+
         // The protocol. This can be http or https.
         protocol: "http",
         // Indicates whether the site is hosted on wordpress.com.
