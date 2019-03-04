@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import Header from "./header";
 import "./layout.scss";
+import "./animate.css";
+
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 // import Modernizr from "modernizr";
@@ -48,6 +50,7 @@ const Layout = ({ children }) => (
               siteTitle={data.wordpressSiteMetadata.name}
               siteSubtitle={data.wordpressSiteMetadata.description}
             /> */}
+
           <Header
             siteTitle={data.site.siteMetadata.title}
             siteSubtitle={data.site.siteMetadata.subtitle}
@@ -57,9 +60,7 @@ const Layout = ({ children }) => (
             {children}
             <footer style={{ textAlign: "center" }}>
               © {new Date().getFullYear()}, Vytvořil{" "}
-              <OutboundLink href="https://wizardly-ride-f58df7.netlify.com">
-                Lukáš Kovář
-              </OutboundLink>
+              <OutboundLink href="https://lkov.tk">Lukáš Kovář</OutboundLink>
               <img
                 style={{ margin: 0, padding: 0, marginLeft: 10 }}
                 src="https://api.netlify.com/api/v1/badges/8febcbba-e5a9-47f1-90ca-ad8b4fec7015/deploy-status"

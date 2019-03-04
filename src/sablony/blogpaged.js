@@ -7,8 +7,12 @@ import Seo from "../components/seo";
 import BlogFull from "./components/blogfull";
 import "./clanky.scss";
 import Img from "gatsby-image";
+import { WOW } from "wowjs";
 
 class SiteTemplate extends Component {
+  componentDidMount() {
+    new WOW().init();
+  }
   render() {
     const str = this.props.pageContext.str;
     const n = this.props.pageContext.n;
@@ -30,7 +34,7 @@ class SiteTemplate extends Component {
 
         <div className="clanky">
           {str.map((clanek, index) => (
-            <article className="clanek" key={index}>
+            <article className="clanek" className="wow fadeIn fast" key={index}>
               {clanek.node.acf !== null && clanek.node.acf.plnezob === true ? (
                 <BlogFull post={clanek.node} />
               ) : (

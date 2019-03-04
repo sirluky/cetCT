@@ -6,8 +6,12 @@ import Seo from "../components/seo";
 import Layout from "../components/layout";
 import BlogFull from "./components/blogfull";
 // import Img from "gatsby-image";
+import { WOW } from "wowjs";
 
 class PostTemplate extends Component {
+  componentDidMount() {
+    new WOW().init();
+  }
   render() {
     // console.log(this.props.pageContext);
     const post = this.props.data.wordpressPost;
@@ -22,8 +26,9 @@ class PostTemplate extends Component {
             `OB Loko Česká Třebová`
           ]}
         />
-
-        <BlogFull post={post} />
+        <div className="wow fadeIn fast">
+          <BlogFull post={post} />
+        </div>
       </Layout>
     );
   }

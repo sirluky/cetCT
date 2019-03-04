@@ -4,8 +4,13 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 const filterAtr = require("../../myfunctions/filterAtr");
+import { WOW } from "wowjs";
 
 class SiteTemplate extends Component {
+  componentDidMount() {
+    new WOW().init();
+  }
+
   render() {
     const page = this.props.data.wordpressPage;
     // const datum = new Date(page.date);4
@@ -20,7 +25,7 @@ class SiteTemplate extends Component {
             `OB Loko Česká Třebová`
           ]}
         />
-        <div className="clanek">
+        <div className="wow fadeIn clanek">
           {/* <h2>{page.title}</h2> */}
           <h3 dangerouslySetInnerHTML={{ __html: page.title }} />
 
