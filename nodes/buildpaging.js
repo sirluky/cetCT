@@ -1,4 +1,5 @@
 const slash = require("slash");
+const path = require("path");
 
 const buildPaging = (createPage, posts, blogPost, blogpaged) => {
   posts.forEach((post, index) => {
